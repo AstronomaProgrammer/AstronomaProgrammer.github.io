@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>La Cocina de Vida</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: black;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%); /* make all photos black and white */ 
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }  
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }  
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="home.html">LA COCINA DE VIDA - MAGDALENAS</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="home.html">INICIO</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">RECETAS
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="AguaFresca.html">AGUA FRESCA</a></li>
+            <li><a href="Enchiladas.html">ENCHILADAS</a></li>
+            <li><a href="Magdalena.html">MAGDALENAS</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="magdalena.jpg" alt="Magdalena" width="1000" height="700">
+		 <div class="carousel-caption">
+				  <h3></h3>
+				  <p></p>
+				</div>      
+      </div>
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center" background-color:pink>
+  <h1>Magdalenas</h1>
+  <font size = "4">
+  <p><em>de Carleigh</em></p>
+  </font>
+  <font size="6"
+  <p>Las Magdalenas son tortas dulces pequeñas que son ricas en sabor, pero ligeras y sabrosas. Los españoles tradicionalmente los comen en el desayuno con café con leche, y se dice que se originó en Aragón, España. También son buenos con chocolate caliente.</p>
+  <br>
+  <img src="magdalena9.jpg"/>
+  <br>
+  <h2>Los Ingredientes</h2>
+  <br>
+  <ul>
+  <li>2 huevos</li>
+  <li>½ taza de azúcar</li>
+  <li>2 onzas de mantequilla</li>
+  <li>5/6 taza de harina (1/2 + 1/3)</li>
+  <li>1/2 cucharada de levadura en polvo</li>
+  <li>1/2 cucharadita de extracto de vainilla</li>
+  <li>1/2 cucharada de leche</li>
+  </ul>
+  <br>
+  <img src="magdalena1.jpg"/>
+  <br><p>
+  <h2>Direcciones</h2>
+  <br>
+  <p>1. Precaliente el horno a 375 grados Fahrenheit.</p>
+  <br>
+  <p>2. Bate los huevos con 3/4 taza de azúcar.</p>
+  <img src = "magdalena3.jpg"/>
+  <br>
+  <p>3. En una cacerola pequeña, derrete la mantequilla en el medio. Añade la mantequilla, la leche y la vainilla a la mezcla del huevo.</p>
+  <br>
+  <p>4. Mezcla la harina y el polvo de hornear en un bol separado.</p>
+  <img src="magdalena4.jpg"/>
+  <br>
+  <p>5. Agrega la mezcla de huevo a la mezcla de harina. La masa es gruesa.</p>
+  <img src="magdalena5.jpg"/>
+  <br>  
+  <p>6. Pon moldes de papel en el molde de la magdalena. Utilice una cuchara grande para servir la cuchara en la cacerola, llenando cada uno medio lleno.</p>
+  <img src="magdalena6.jpg"/>
+  <br>
+  <p>7. Coloca las ollas en el horno para 15 minutos, hasta que estén doradas. Retira del horno y dejar enfria durante 5 minutos.</p>
+  <img src="magdalena7.jpg"/>
+  <p>8. ¡Disfruta!
+  <br>
+  <img src="magdalena8.jpg"/>
+  <br><p>
+  <img src="magdalena10.jpg"/>
+  <br><p></p>
+<div id="band" class="container text-center">
+	<div class="col-sm-4">
+      <p class="text-center"><strong>Neal</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="neal.jpg" class="img-circle person" alt="Neal" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>De Washington</p>
+        <p>NASA</p>
+        <p>Clase de 2019</p>
+      </div>
+    </div>
+  </div>
+  </font>
+<script>
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="A LA CIMA">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
