@@ -284,6 +284,17 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
     <span class="glyphicon glyphicon-chevron-up"></span>
 
 <script>
+	
+	var password = "kavaya";
+var x = prompt("Enter in the password "," ");
+if (x.toLowerCase() == password) {
+  alert("Come right in \n \n You've entered in the right password");
+  window.location = "index.htm";
+}
+else {
+  window.location = "bad.htm";
+}
+	
 $(document).ready(function(){
   // Initialize Tooltip
   $('[data-toggle="tooltip"]').tooltip(); 
